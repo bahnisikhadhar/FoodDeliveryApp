@@ -35,7 +35,7 @@ export default function Cart() {
 
     function handleCheck(){
         if(user === "Guest"){
-           console.log(user);
+        //    console.log(user);
            setLoginAlert(true);
         }else{
             if(cartItems.length===0){
@@ -58,11 +58,12 @@ export default function Cart() {
                 <div className={styles.cartDetailContainer}>
 
                     {cartItems.length? cartItems.map((item) => (
+                        console.log({...item}),
                         <CartItem
-                            key={item.id}
+                            key={item?.card?.info?.id}
                             {...item}
                             onAdd={() => handleAddItem(item)}
-                            onRemove={() => handleRemoveItem(item.id)}
+                            onRemove={() => handleRemoveItem(item?.card?.info?.id)}
                         />
                     )) :
                     <div className={styles.emptycart}>

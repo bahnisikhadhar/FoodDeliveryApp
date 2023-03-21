@@ -1,26 +1,3 @@
-// import { createSlice } from "@reduxjs/toolkit";
-
-// const cartSlice = createSlice({
-//     name: "cart",
-//     initialState: {
-//         items: [],
-//     },
-//     reducers: {
-//         addItem: (state,action) =>{
-//             state.items.push(action.payload);
-//         },
-//         removeItem: (state,action) =>{
-//             state.items.pop();
-//         },
-//         clearCart: (state) =>{
-//             state.items = [];
-//         }
-//     }
-// })
-
-// export const {addItem,removeItem,clearCart} = cartSlice.actions;
-// export default cartSlice.reducer;
-
 import { createSlice } from "@reduxjs/toolkit";
 
 const cartSlice = createSlice({
@@ -33,7 +10,7 @@ const cartSlice = createSlice({
     reducers: {
         addItem: (state, action) => {
             const newItem = action.payload;
-            const existingItem = state.items.find(item => item.id === newItem.id);
+            const existingItem = state.items.find(item => item?.card?.info?.id === newItem?.card?.info?.id);
             if (existingItem) {
                 existingItem.quantity += 1;
             } else {
@@ -41,18 +18,18 @@ const cartSlice = createSlice({
                 state.items.push(newItem);
             }
             state.totalQuantity += 1;
-            state.totalAmount += newItem.price;
+            state.totalAmount += newItem?.card?.info?.price;
         },
         removeItem: (state, action) => {
             const itemId = action.payload;
-            const existingItem = state.items.find(item => item.id === itemId);
+            const existingItem = state.items.find(item => item?.card?.info?.id === itemId);
             if (existingItem.quantity === 1) {
-                state.items = state.items.filter(item => item.id !== itemId);
+                state.items = state.items.filter(item => item?.card?.info?.id !== itemId);
             } else {
                 existingItem.quantity -= 1;
             }
             state.totalQuantity -= 1;
-            state.totalAmount -= existingItem.price;
+            state.totalAmount -= existingItem?.card?.info?.price;
         },
         clearCart: (state) => {
             state.items = [];

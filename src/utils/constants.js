@@ -1,7 +1,9 @@
 //export const RESTO_LIST_URL = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.159014&lng=72.9985686&sortBy=COST_FOR_TWO_H2L&page_type=DESKTOP_WEB_LISTING"
  //export const RESTO_LIST_URL = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.159014&lng=72.9985686&offset=15&sortBy=RELEVANCE&pageType=SEE_ALL&page_type=DESKTOP_SEE_ALL_LISTING"
  export const RESTO_LIST_URL = "https://corsanywhere.herokuapp.com/https://www.swiggy.com/dapi/restaurants/list/v5"
-export const MENU_LIST_URL = "https://corsanywhere.herokuapp.com/https://www.swiggy.com/dapi/menu/v4/full?lat=19.159014&lng=72.9985686&menuId="
+// export const MENU_LIST_URL = "https://corsanywhere.herokuapp.com/https://www.swiggy.com/dapi/menu/v4/full?lat=19.159014&lng=72.9985686&menuId="
+
+export const MENU_LIST_URL = "https://corsanywhere.herokuapp.com/https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=19.159014&lng=72.9985686&restaurantId="
 export const IMG_BASE_URL= "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"
 
 // export const REL_RESTO_LIST_URL = "https://corsanywhere.herokuapp.com/https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.159014&lng=72.9985686&sortBy=RELEVANCE&page_type=DESKTOP_WEB_LISTING"
