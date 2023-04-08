@@ -18,7 +18,7 @@ export default function CartItem({card, quantity, onAdd, onRemove }) {
           <button>{quantity}</button>
           <button onClick={onAdd}>+</button>
         </div>
-      <h4>₹{card?.info?.price / 100* quantity}</h4>
+      <h4>₹{card?.info?.price?  card?.info?.price / 100* quantity : 100}</h4>
     </div>
   )
 }

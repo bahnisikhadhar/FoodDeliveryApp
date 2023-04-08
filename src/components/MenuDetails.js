@@ -34,7 +34,6 @@ console.log(filteredItems);
 
   const dispatch = useDispatch();
   const addFoodItem = (item) => {
-
     dispatch(addItem(item));
     setAddedItems([...addedItems, item?.card?.info?.id]);
     console.log(addedItems)

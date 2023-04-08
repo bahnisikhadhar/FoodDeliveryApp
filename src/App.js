@@ -18,8 +18,6 @@ function App() {
     <Provider store={store}>
       <AppContext.Provider value={{isModalOpen,setIsModalOpen,isSignedUp,setIsSignedUp,isLoggedin,setIsLoggedin,user,setUser}}>
       <Header />
-       {/* <Body/> */}
-      
       <Outlet />
       </AppContext.Provider>
       {/* <Footer /> */}
