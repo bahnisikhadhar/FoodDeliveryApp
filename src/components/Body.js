@@ -12,7 +12,8 @@ import SearchCity from './SearchCity';
 
 function Body() {
   const [coordinates, setCoordinates] = useState({ lat: 19.159014, lng: 72.9985686 });
-  const [restoListUrl, setRestoListUrl] = useState(`${RESTO_LIST_URL}?lat=${coordinates.lat}&lng=${coordinates.lng}&offset=15&sortBy=RELEVANCE&pageType=SEE_ALL&page_type=DESKTOP_SEE_ALL_LISTING`);
+  // const [restoListUrl, setRestoListUrl] = useState(`${RESTO_LIST_URL}?lat=${coordinates.lat}&lng=${coordinates.lng}&offset=15&sortBy=RELEVANCE&pageType=SEE_ALL&page_type=DESKTOP_SEE_ALL_LISTING`);
+  const [restoListUrl, setRestoListUrl] = useState(`http://localhost:3001/api/restaurants?lat=${coordinates.lat}&lng=${coordinates.lng}&page_type=DESKTOP_WEB_LISTING`);
   const { data, isPending, error } = useFetch(restoListUrl);
   const [showShimmer, setShowShimmer] = useState(true);
   const [restaurantList, setRestaurantList] = useState([]);
@@ -60,6 +61,7 @@ function Body() {
     if (data) {
       setShowShimmer(false);
     }
+    console.log("6444",data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants[0].info)
   }, [data]);
 
   return (
