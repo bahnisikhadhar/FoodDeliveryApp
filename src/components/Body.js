@@ -32,7 +32,8 @@ function Body() {
   useEffect(() => {
     setRestaurantList([]);
     setOffset(15); 
-    setRestoListUrl(`https://food-app-be-i13l.onrender.com/api/restaurants?lat=${coordinates.lat}&lng=${coordinates.lng}&offset=15&sortBy=RELEVANCE&pageType=SEE_ALL&page_type=DESKTOP_SEE_ALL_LISTING`);
+    // setRestoListUrl(`https://food-app-be-i13l.onrender.com/api/restaurants?lat=${coordinates.lat}&lng=${coordinates.lng}&offset=15&sortBy=RELEVANCE&pageType=SEE_ALL&page_type=DESKTOP_SEE_ALL_LISTING`);
+    setRestoListUrl(`http://localhost:3001/api/restaurants?lat=${coordinates.lat}&lng=${coordinates.lng}&offset=15&sortBy=RELEVANCE&pageType=SEE_ALL&page_type=DESKTOP_SEE_ALL_LISTING`);
    
   }, [coordinates]);
 
