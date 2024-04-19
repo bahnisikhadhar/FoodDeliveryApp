@@ -115,8 +115,7 @@ export default function PaymentCard() {
             {showSuccess && 
             <div className={styles.paymentPopup}>
               Payment SuccessFul!! &#9989;
-            </div>
-            }
+            </div>}
             </div>
           </div>
         </div>
