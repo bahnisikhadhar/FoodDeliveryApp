@@ -76,7 +76,7 @@ const Signup = () => {
   return (
     <div className={styles.signupPage}>
       <div className={styles.signupContainer}>
-        <div onClick={() => setIsModalOpen(false)} className={styles.close}><i class="fa-solid fa-xmark"></i></div>
+        <div onClick={() => setIsModalOpen(false)} className={styles.close}><i className="fa-solid fa-xmark"></i></div>
 
         <div className={styles.signAndLogin}>
           <div className={styles.signUp}>

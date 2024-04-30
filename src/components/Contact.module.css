@@ -101,7 +101,7 @@ box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 .question_h4 {
   text-transform: none;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 .question_p {
   color: hsl(209, 34%, 30%);
@@ -212,13 +212,6 @@ padding: 2.5rem 2rem;
   font-size: 1.2rem;
   color: rgb(249, 105, 14);
 }
-
-@media (min-width:0px) and (max-width:850px){
-  .contact_body{
-    flex-direction: column;
-  }
-}
-
 .popupEmail {
   position: fixed;
   top: 20%;
@@ -230,3 +223,25 @@ padding: 2.5rem 2rem;
   border-radius: 5px;
 
 }
+@media (min-width:450px) and (max-width:850px){
+  .contact_body{
+    flex-direction: column;
+  }
+  .question_h4 {
+    text-transform: none;
+    font-size: 1rem;
+  }
+}
+@media (min-width:0px) and (max-width:450px){
+  .contact_body{
+    flex-direction: column;
+  }
+  .question_h4 {
+    text-transform: none;
+    font-size: .8rem;
+  }
+  .contact_h3{
+    font-size: 1.5rem;
+  }
+}
+
