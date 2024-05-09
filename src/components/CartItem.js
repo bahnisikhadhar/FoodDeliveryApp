@@ -6,6 +6,7 @@ import foodPlaceholder from '../assets/restaurant.png';
 export default function CartItem({card, quantity, onAdd, onRemove }) {
   
   // const itemImg = cloudinaryImageId ? IMG_BASE_URL + cloudinaryImageId : foodPlaceholder;
+  console.log("99999",card)
   const itemImg = card?.info?.imageId  ? IMG_BASE_URL + card?.info?.imageId : foodPlaceholder;
   return (
     <div className={styles.cartDetails}>
@@ -18,7 +19,7 @@ export default function CartItem({card, quantity, onAdd, onRemove }) {
           <button>{quantity}</button>
           <button onClick={onAdd}>+</button>
         </div>
-      <h4>₹{card?.info?.price?  card?.info?.price / 100* quantity : 100}</h4>
+      <h4>₹{card?.modifiedPrice / 100* quantity}</h4>
     </div>
   )
 }
